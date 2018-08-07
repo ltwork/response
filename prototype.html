@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>  
+<script>
+    function man (name,age){
+        this.name = name;
+        this.age = age;
+        this.sayHi = function(){
+            console.log('哈哈哈');
+        }
+    }
+
+    // var m1 = new man ("雷霆","18");
+    // console.log(m1);
+    // console.log(man.prototype);
+    //往原型里面添加属性和方法
+    man.prototype.type = "人类";
+    man.prototype.sayHi = function(){
+        console.log("我是"+this.name);
+    }
+    //console.log(man.prototype);
+    var m1 = new man("雷霆",18);
+    m1.sayHi();
+    //console.log(m1);
+
+
+
+
+
+</script>
